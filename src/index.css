@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
 /* Set box-sizing for all elements */
 *,
 :after,
@@ -23,7 +25,14 @@ header {
 
 h1,
 p {
-  margin: 0;
+  margin: -0.5rem;
+}
+
+h1{
+  font-family: 'Concert One', cursive;
+  color: rgb(46, 49, 78);
+  text-shadow: stroke rgb(250, 143, 223);
+  font-size: 4rem;
 }
 
 .muted {
@@ -99,6 +108,7 @@ input {
   margin: 0 0 0.32rem .9rem;
 }
 
+
 /* Set the color of the placeholder text */
 input::placeholder {
   color: var(--white);
@@ -124,6 +134,14 @@ img {
   width: 100%;
 }
 
+.App > img{
+  margin-left: 89.9%;
+  width: 10%;
+  height: auto;
+  margin: -1rem 0 -1rem .15rem;
+  ;
+}
+
 .brand {
   align-items: center;
   display: flex;
@@ -131,8 +149,8 @@ img {
 }
 
 .brand img {
-  height: 2rem;
-  margin: 0 0.5rem 0 0;
+  height: 6rem;
+  margin: 0 .02rem 0 0;
   width: auto;
 }
 

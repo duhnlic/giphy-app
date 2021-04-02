@@ -66,6 +66,7 @@ function App() {
   return (
     <div className="App">
       <SearchHeader lastSearch={lastSearch} />
+      <img src="https://media.giphy.com/media/0roItxZQWig1RrrUMR/giphy.gif" alt="Powered-By-Giphy" className="Giphy"/>
       <SearchForm
         handleLanguageChange={handleLanguageChange}
         handleRatingChange={handleRatingChange}
