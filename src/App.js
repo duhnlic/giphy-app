@@ -7,13 +7,14 @@ import SearchHeader from './Components/SearchHeader/SearchHeader'
 
 function App() {
   const [images, setImages] = useState([]);
-  const [searchString, setSearchString] = useState('gif');
+  const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] = useState('');
-  
+  const [resultQuantity, setResultQuantity] = useState('15');
+  const [resultRating, setResultRating] = useState('G');
+  const [resultLanguage, setResultLanguage] = useState('en');
+
   const searchOptions = {
     key: process.env.REACT_APP_GIPHY_KEY,
-    limit: 25,
-    rating: 'G',
     api: 'https://api.giphy.com/v1/gifs',
     endpoint: '/search'
   };
@@ -21,7 +22,7 @@ function App() {
   function getImages(searchString) {
     // const searchString = '';
     /* Build a URL from the searchOptions object */
-    const url = `${searchOptions.api}${searchOptions.endpoint}?api_key=${searchOptions.key}&q=${searchString} &limit=${searchOptions.limit}&offset=${searchOptions.offset}&rating=${searchOptions.rating}&lang=en`;
+    const url = `${searchOptions.api}${searchOptions.endpoint}?api_key=${searchOptions.key}&q=${searchString} &limit=${resultQuantity}&offset=${searchOptions.offset}&rating=${resultRating}&lang=${resultLanguage}`;
     
     fetch(url)
     .then(response => response.json())
@@ -43,6 +44,18 @@ function App() {
   function handleChange(event) {
     setSearchString(event.target.value);
   }
+
+  function handleQuantityChange(event) {
+    setResultQuantity(event.target.value);
+  }
+
+  function handleRatingChange(event) {
+    setResultRating(event.target.value);
+  }
+
+  function handleLanguageChange(event) {
+    setResultLanguage(event.target.value);
+  }
   
   function handleSubmit(event) {
     event.preventDefault();
@@ -54,6 +67,9 @@ function App() {
     <div className="App">
       <SearchHeader lastSearch={lastSearch} />
       <SearchForm
+        handleLanguageChange={handleLanguageChange}
+        handleRatingChange={handleRatingChange}
+        handleQuantityChange={handleQuantityChange}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         searchString={searchString}

@@ -7,7 +7,7 @@ function SearchHeader({ lastSearch }) {
   return (
     <header>
         <div className="brand">
-            <img src={logo} alt="" />
+            <img src={logo} alt="Giphy Searcher" />
             <h1>Giphy in a Jiffy</h1>
         </div>
         <p className="muted">

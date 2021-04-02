@@ -8,10 +8,10 @@
 /* Create color variables */
 :root {
   --primary: #5f9ae0;
-  --secondary: #ff7f50;
-  --secondary-light: #ffa483;
+  --secondary: #ab6be7;
+  --secondary-light: #dcbff8;
   --white: #fff;
-  --muted: #a1a1a1;
+  --muted: #949494;
 }
 
 header {
@@ -42,6 +42,7 @@ body {
 button {
   background-color: var(--primary);
   border: 0;
+  border-radius: .5rem;
   color: var(--white);
   flex-grow: 0;
   font-size: 1.2rem;
@@ -65,11 +66,37 @@ form {
 input {
   background-color: var(--secondary-light);
   border: 2px solid var(--secondary);
+  border-radius: .3rem;
   color: var(--white);
   flex-grow: 1;
   font-size: 1.2rem;
   padding: 0.75rem 1rem;
   width: 100%;
+  margin-right: 1rem;
+}
+
+.ResultLimit > #result-amount {
+  background-color: #bce7cb;
+  border: 2px solid #89c4ab;
+  border-radius: .5rem;
+  padding: 0.30rem 1rem;
+  margin: 0 0 0.32rem 0;
+}
+
+.ResultRating > #result-rating{
+  background-color: #e6b1c1;
+  border: 2px solid #b97f91;
+  border-radius: .5rem;
+  padding: 0.3rem .02rem;
+  margin: 0 0 0.32rem 0;
+}
+
+.ResultLanguage > #result-language{
+  background-color: #fff7b0;
+  border: 2px solid #c7bd65;
+  border-radius: .5rem;
+  padding: 0.3rem .9rem;
+  margin: 0 0 0.32rem .9rem;
 }
 
 /* Set the color of the placeholder text */
